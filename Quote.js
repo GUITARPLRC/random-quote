@@ -8,11 +8,19 @@ var quotes = ['"The best way to cheer yourself up is to try to cheer somebody el
 	'"Life moves pretty fast. If you don\'t stop and look around once in a while, you could miss it." - Ferris Bueller', 
 	'"The important thing is not to stop questioning" - Albert Einstein', 
 	'"Enjoy the little things, for one day you may look back and realize they were the big things." - Robert Brault'];
+var prevNumber = 0;
 	
 function chooseQuote() {
+	var myEl = document.getElementById("display");
+	var randomNumber = Math.floor(Math.random() * quotes.length);
 	
-	var number = Math.floor(Math.random() * 9);
-	console.log(quotes[number]);
+	if (randomNumber !== prevNumber) {
+		myEl.textContent = quotes[randomNumber];
+		prevNumber = randomNumber;
+	}
+	else {
+		return chooseQuote();
+	}
 }
 
-chooseQuote();
+window.onload = chooseQuote();
