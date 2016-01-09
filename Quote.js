@@ -1,5 +1,6 @@
 var quotes = ['"The best way to cheer yourself up is to try to cheer somebody else up." - Mark Twain', 
-	'"Confusion is the beginning of wisdom." - Socrates', 
+	'"Confusion is the beginning of wisdom." - Socrates',
+    '"Do everything you possibly can in one lifetime" - Kanye West',
 	'"The difference between a mountain and a molehill is your perspective." - Al Neuharth', 
 	'"Act the part and you will become the part." - William James', 
 	'"You always pass failure on the way to success." - Mickey Rooney', 
@@ -25,19 +26,3 @@ function chooseQuote() {
 
 window.onload = chooseQuote();
 
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));
