@@ -11,7 +11,7 @@ var quotes = ['"The best way to cheer yourself up is to try to cheer somebody el
 var prevNumber = 0;
 	
 function chooseQuote() {
-	var myEl = document.getElementById("display");
+	var myEl = document.getElementById("quote_display");
 	var randomNumber = Math.floor(Math.random() * quotes.length);
 	
 	if (randomNumber !== prevNumber) {
@@ -24,3 +24,20 @@ function chooseQuote() {
 }
 
 window.onload = chooseQuote();
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
