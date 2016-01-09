@@ -6,7 +6,7 @@ body {
 h1 {
     
 }
-p {
+#display {
 	text-align:center;
 	margin:50px auto 50px auto;
 	box-shadow:1px -1px -1px #000;
@@ -15,7 +15,4 @@ p {
 
 #button-group {
 	
-}
-#button-group a{
-	margin-top:5px;
 }
