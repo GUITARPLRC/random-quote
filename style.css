@@ -12,26 +12,31 @@ h1 {
 	text-align:center;
 	margin:50px auto 50px auto;
 	width:45%;
-	height:320px;
+	height:230px;
 	font-family: 'Satisfy', cursive;
 	font-size:36px;
-	background-color:#2ecc71;
+	background-color:#fff;
 	padding:0 30px 20px 30px;
 	border:30px solid transparent;
 	border-radius:10px;
 	border-image:url(http://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/border.png) 30 30 round;
+	box-shadow:1px 1px 20px #000;
 }
 
 #quote_display {
-	padding-top:30px;
+	padding-top:20px;
 }
-
-#button-group {
-	
+#share {
+	background-color:#00aced;
+	width:100px;
+	height:30px;
+	font-size:20px;
+	color:#fff;
+	margin-bottom:20px;
 }
 
 #newQuote {
 	font-size:24px;
 	border-radius:10px;
-	box-shadow:1px -1px 10px #000;
+	box-shadow:1px -1px 5px #000;
 }

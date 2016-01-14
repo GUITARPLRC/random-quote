@@ -1,5 +1,7 @@
 function chooseQuote() {
 	var randomNumber = Math.floor(Math.random() * quotes.length);
+	var link = "https://twitter.com/intent/tweet?text=" + quotes[randomNumber];
+	var tweetBtn = document.getElementById("tweet");
 	
 	if (randomNumber !== prevNumber) {
 		myEl.textContent = quotes[randomNumber];
@@ -8,6 +10,8 @@ function chooseQuote() {
 	else {
 		return chooseQuote();
 	}
+	
+	tweetBtn.href = link;
 }
 
 var quotes = ['"The best way to cheer yourself up is to try to cheer somebody else up." - Mark Twain',
@@ -23,24 +27,14 @@ var quotes = ['"The best way to cheer yourself up is to try to cheer somebody el
 	'"Enjoy the little things, for one day you may look back and realize they were the big things." - Robert Brault'],
 	prevNumber = 0,
 	button = document.getElementById("newQuote"),
-	myEl = document.getElementById("quote_display"),
+	myEl = document.getElementById("quote_display");
+	
 	myContent = myEl.textContent;
+	
+	
 	
 button.addEventListener("click", function(){
 	return chooseQuote();
 });
 
 window.onload = chooseQuote();
-
-!function(d,s,id){
-	var js,
-		fjs=d.getElementsByTagName(s)[0],
-		p=/^http:/.test(d.location)?'http':'https';
-	
-	if (!d.getElementById(id)){ 
-		js=d.createElement(s);
-		js.id=id;
-		js.src=p+'://platform.twitter.com/widgets.js';
-		fjs.parentNode.insertBefore(js,fjs);
-	}
-}(document, 'script', 'twitter-wjs');
