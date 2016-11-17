@@ -13,17 +13,58 @@
 </head>
 
 <body>
+  <div id="top">
 
+    <h1>Inspirational Quotes</h1>
 
-  <h1>Inspirational Quotes</h1>
+    <div id="accounts">
+      <a href="#modal">New User</a>
+      <a href="#modal">Login</a>
+    </div>
+  </div>
+
+  <div id="modal">
+    <div>
+
+      <a href="#close" id="close">X</a>
+
+      <h2>Good Day!</h2>
+      <p>Please Login To Your Account</p>
+
+      <p>Username</p>
+      <input type="text">
+      <p>Password</p>
+      <input type="password">
+
+      <div class="loginButtons">
+
+        <a href="#" id="signIn">Sign In</a>
+
+        <div id="remember">
+          <input type="checkbox">
+          <label>Remember Me</label>
+        </div>
+
+      </div>
+
+      <div id="question">
+        <a href="#">Forgot Your Password?</a>
+        <a href="#">Create An Account</a>
+      </div>
+
+    </div>
+  </div>
 
   <div id="display">
     <p id="quoteDisplay"></p>
   </div>
 
-  <button id="newQuote">New Quote</button>
+  <div id="mainButtons">
+    <button id="newQuote">New Quote</button>
+    <button id="saveQuote">Save Quote</button>
+  </div>
 
-  <a id="tweet" target="_blank">Tweet This</a>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="script.js"></script>
