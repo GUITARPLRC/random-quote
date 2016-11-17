@@ -1,12 +1,15 @@
-(function() {
+(function () {
 
   var quoteLink = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?",
     tweetBtn = document.getElementById("tweet"),
-    button = document.getElementById("newQuote"),
+    newQuote = document.getElementById("newQuote"),
     display = document.getElementById("quoteDisplay"),
     quote = '',
     author = '',
-    link = 'https://twitter.com/intent/tweet?text=' + '"' + quote + '" - ' + author;
+    link = 'https://twitter.com/intent/tweet?text=',
+    input = document.getElementById("input"),
+    login = document.getElementById("login"),
+    newUser = document.getElementById('newUser');
 
   getQuote();
 
@@ -28,9 +31,7 @@
 
   }
 
-  tweetBtn.href = link;
-
-  button.addEventListener("click", function () {
+  newQuote.addEventListener("click", function () {
     return getQuote();
   });
 
